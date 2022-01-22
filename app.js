@@ -77,22 +77,22 @@ function accor(arr1) {
   let acc1 = "";
   for (i = 0; i < arr1.length; i++) {
     acc1 += `<div class="accordion-item">
-     <h2 class="accordion-header" id="headingOne">
+     <h2 class="accordion-header" id="heading${i}">
        <button
          class="accordion-button"
          type="button"
          data-bs-toggle="collapse"
-         data-bs-target="#collapseOne"
+         data-bs-target="#collapse${i}"
          aria-expanded="true"
-         aria-controls="collapseOne"
+         aria-controls="collapse${i}"
        >
        ${arr1[i].title}
        </button>
      </h2>
      <div
-       id="collapseOne"
+       id="collapse${i}"
        class="accordion-collapse collapse show"
-       aria-labelledby="headingOne"
+       aria-labelledby="heading${i}"
        data-bs-parent="#accordionExample"
      >
        <div class="accordion-body" id="acc-b">
