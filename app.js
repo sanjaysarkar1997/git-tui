@@ -10,6 +10,8 @@ function todo(toDos) {
 }
 
 todo(toDos);
+
+
 let data = [
   { name: "Mike", age: 26, car: "BMW" },
   { name: "Jane", age: 28, car: "Toyota" },
