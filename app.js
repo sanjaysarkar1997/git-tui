@@ -49,5 +49,26 @@ function infoFunction(arr) {
 
   // infoDiv.innerHTML = info;
 }
-console.log(infoFunction(data))
+console.log(infoFunction(data));
 infoDiv.innerHTML = infoFunction(data.concat(data1));
+
+// Accordion
+
+let accordion = [
+  {
+    title: "What is Lorem Ipsum?",
+    desc: "Lorem",
+  },
+  {
+    title: "What is Lorem Ipsum?",
+    desc: "Lorem",
+  },
+  {
+    title: "What is Lorem Ipsum?",
+    desc: "Lorem",
+  },
+  {
+    title: "What is Lorem Ipsum?",
+    desc: "Lorem",
+  },
+];
