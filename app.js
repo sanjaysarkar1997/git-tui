@@ -1,5 +1,6 @@
 const toDos = ["Ankita", "Arpita", "Priya", "Katrina", "Akshay", "Jubin"];
 const todoDiv = document.getElementById("todo-ul");
+const infoDiv = document.getElementById("info");
 
 function todo(toDos) {
   let to = "";
@@ -9,8 +10,7 @@ function todo(toDos) {
   todoDiv.innerHTML = to;
 }
 
-todo(toDos);
-
+// todo(toDos);
 
 let data = [
   { name: "Mike", age: 26, car: "BMW" },
@@ -23,3 +23,19 @@ let data = [
   { name: "Liz", age: 33, car: "Toyota" },
   { name: "Joe", age: 35, car: "Mercedes" },
 ];
+
+function infoFunction(data) {
+  let info = "";
+  for (var x = 0; x < data.length; x++) {
+    info += `<div class="col-3">
+      <div class="card">
+       <div class="card-body">
+       <h1>${data[x].name}</h1><p>${data[x].age}</p><p>${data[x].car}</p></div>
+      </div>
+    </div>`;
+  }
+
+  infoDiv.innerHTML = info;
+}
+
+infoFunction(data);
