@@ -1,4 +1,4 @@
-const toDos = ["ankita", "arpita", "priya", "Katrina", "Akshay", "Jubin"];
+const toDos = ["Ankita", "Arpita", "Priya", "Katrina", "Akshay", "Jubin"];
 const todoDiv = document.getElementById("todo-ul");
 
 function todo(toDos) {
