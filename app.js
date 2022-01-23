@@ -39,7 +39,7 @@ let data1 = [
 function infoFunction(arr) {
   let info = "";
   for (var x = 0; x < arr.length; x++) {
-    info += `<div class="col-3">
+    info += `<div class="col-3" style="background-color:${getRandomColor()}">
       <div class="card">
        <div class="card-body">
        <h1>${arr[x].name}</h1><p>${arr[x].age}</p><p>${arr[x].car}</p></div>
@@ -50,8 +50,6 @@ function infoFunction(arr) {
 
   // infoDiv.innerHTML = info;
 }
-console.log(infoFunction(data));
-infoDiv.innerHTML = infoFunction(data.concat(data1));
 
 // Accordion
 
@@ -107,7 +105,7 @@ function accor(arr1) {
    </div>
    `;
   }
-  accDiv.innerHTML = acc1;
+  // accDiv.innerHTML = acc1;
 }
 accor(accordion);
 
@@ -120,36 +118,18 @@ function getRandomColor() {
   return color;
 }
 
-// function setRandomColor() {
-//   $("#colorpad").css("background-color", getRandomColor());
-// }
-// function card(inlo) {
-//   let p = "";
-//   for (var k = 0; k < inlo.length; k++) {
-//     p += `<div class="col-3">
-//      <div class="card" style="background-color:${getRandomColor()}">
-//       <div class="card-body>
-//       <h1>${inlo[k].name}</h1><p>${inlo[k].age}</p><p>${inlo[k].car}</p>
-//       </div>
-//      </div>
-//    </div>`;
-//   }
-//   return p;
-// }
-// console.log(card(data));
-// card2.innerHTML = card(data);
-function card(arg){
-  let q="";
-  for(var l=0;l<arg.length;l++){
- q+=`<div class="col-3">
+function card(arg) {
+  let q = "";
+  for (var l = 0; l < arg.length; l++) {
+    q += `<div class="col-3">
        <div class="card" style="background-color:${getRandomColor()}">
-       <div class="card-body>
+       <div class="card-body">
        <h1>${arg[l].name}</h1><p>${arg[l].age}</p><p>${arg[l].car}</p>
        </div>
       </div>
-    </div>`
+    </div>`;
   }
   return q;
 }
 
-card2.innerHTML=card(data);
+card2.innerHTML = card(data);
