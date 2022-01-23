@@ -2,7 +2,7 @@ const toDos = ["Ankita", "Arpita", "Priya", "Katrina", "Akshay", "Jubin"];
 const todoDiv = document.getElementById("todo-ul");
 const infoDiv = document.getElementById("info");
 const accDiv = document.getElementById("accordionExample");
-
+const card2 = document.getElementById("infocard");
 function todo(toDos) {
   let to = "";
   for (var x = 0; x < toDos.length; x++) {
@@ -73,6 +73,13 @@ let accordion = [
     desc: "Lorem",
   },
 ];
+
+function show(k) {
+  if (k == 0) {
+    return "show";
+  }
+  return "";
+}
 function accor(arr1) {
   let acc1 = "";
   for (i = 0; i < arr1.length; i++) {
@@ -84,17 +91,15 @@ function accor(arr1) {
          data-bs-toggle="collapse"
          data-bs-target="#collapse${i}"
          aria-expanded="true"
-         aria-controls="collapse${i}"
+         aria-controls="#collapse${i}"
        >
        ${arr1[i].title}
        </button>
      </h2>
-     <div
-       id="collapse${i}"
-       class="accordion-collapse collapse show"
+     <div id="collapse${i}"
+       class="accordion-collapse collapse ${show(i)} "
        aria-labelledby="heading${i}"
-       data-bs-parent="#accordionExample"
-     >
+       data-bs-parent="#accordionExample">
        <div class="accordion-body" id="acc-b">
        <strong> <code>${arr1[i].desc}</code>
        </div>
@@ -105,3 +110,46 @@ function accor(arr1) {
   accDiv.innerHTML = acc1;
 }
 accor(accordion);
+
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// function setRandomColor() {
+//   $("#colorpad").css("background-color", getRandomColor());
+// }
+// function card(inlo) {
+//   let p = "";
+//   for (var k = 0; k < inlo.length; k++) {
+//     p += `<div class="col-3">
+//      <div class="card" style="background-color:${getRandomColor()}">
+//       <div class="card-body>
+//       <h1>${inlo[k].name}</h1><p>${inlo[k].age}</p><p>${inlo[k].car}</p>
+//       </div>
+//      </div>
+//    </div>`;
+//   }
+//   return p;
+// }
+// console.log(card(data));
+// card2.innerHTML = card(data);
+function card(arg){
+  let q="";
+  for(var l=0;l<arg.length;l++){
+ q+=`<div class="col-3">
+       <div class="card" style="background-color:${getRandomColor()}">
+       <div class="card-body>
+       <h1>${arg[l].name}</h1><p>${arg[l].age}</p><p>${arg[l].car}</p>
+       </div>
+      </div>
+    </div>`
+  }
+  return q;
+}
+
+card2.innerHTML=card(data);
