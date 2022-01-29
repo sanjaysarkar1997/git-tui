@@ -8,3 +8,12 @@ table {
   align-items: center;
 }
 
+.second-hand{
+    position: absolute;
+    border: 1px solid black;
+    width: 130px;
+    left: 50%;
+    transform: rotate(20deg);
+    top: 152px;
+    transform-origin: 0px 10%;
+}
