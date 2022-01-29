@@ -201,10 +201,21 @@ let day = [
 
 const SEC = 1;
 var date = new Date();
-let cl = SEC*(date.getHours()*60+date.getMinutes())*60+date.getSeconds()
+let cl =
+  SEC * (date.getHours() * 60 + date.getMinutes()) * 60 + date.getSeconds();
+
+let secondHand = document.querySelector("#second-hand");
 function time() {
-  cl++
-watch2.innerHTML = Math.floor(cl/3600)%24+":"+ Math.floor(cl/60)%60 +":" +cl%60;
-console.log(cl)
+  cl++;
+
+  secondHand.style.transform = `rotate(${cl * 6}deg)`;
+
+  watch2.innerHTML =
+    (Math.floor(cl / 3600) % 24) +
+    ":" +
+    (Math.floor(cl / 60) % 60) +
+    ":" +
+    (cl % 60);
+  console.log(cl);
 }
 setInterval(time, 1000 * SEC);
