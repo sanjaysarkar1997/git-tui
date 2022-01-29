@@ -3,6 +3,9 @@ const todoDiv = document.getElementById("todo-ul");
 const infoDiv = document.getElementById("info");
 const accDiv = document.getElementById("accordionExample");
 const card2 = document.getElementById("infocard");
+const table2 = document.getElementById("tablediv");
+const watch2 = document.getElementById("clock");
+const watch3 = document.getElementById("clock2");
 function todo(toDos) {
   let to = "";
   for (var x = 0; x < toDos.length; x++) {
@@ -23,6 +26,7 @@ let data = [
   { name: "Phil", age: 31, car: "BMW" },
   { name: "Liz", age: 33, car: "Toyota" },
   { name: "Joe", age: 35, car: "Mercedes" },
+  { name: "Ankita", age: 21, car: "Mercedes" },
 ];
 let data1 = [
   { name: "Mike", age: 26, car: "BMW" },
@@ -117,12 +121,15 @@ function getRandomColor() {
   }
   return color;
 }
+// function getRandomColor() {
+//   return `rgb(${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)})`;
+// }
 
 function card(arg) {
   let q = "";
   for (var l = 0; l < arg.length; l++) {
     q += `<div class="col-3">
-       <div class="card" style="background-color:${getRandomColor()}">
+       <div class="card" style="background-color:${getRandomColor()}; border:2px solid ${getRandomColor()}">
        <div class="card-body">
        <h1>${arg[l].name}</h1><p>${arg[l].age}</p><p>${arg[l].car}</p>
        </div>
@@ -132,4 +139,72 @@ function card(arg) {
   return q;
 }
 
-card2.innerHTML = card(data);
+// card2.innerHTML = card(data);
+function table(ta) {
+  let th = "";
+  for (var c = 0; c < ta.length; c++) {
+    th += `<tr style="background-color:${getRandomColor()}" >
+        <th scope="row">${c}</th>
+        <td  >${ta[c].name}</td>
+        <td >${ta[c].age}</td>
+        <td >${ta[c].car}</td>
+      </tr>`;
+  }
+  return th;
+}
+// table2.innerHTML=table(data);
+// let cl=1
+// let r=0
+// let m=0
+// let h
+// function startTime(){
+// cl++
+//  let s= cl++
+// if(s==60){
+//   m=m+1;
+//   cl=0;
+// }
+// if(m==60){
+//   h=h+1;
+//   m=0;
+// }
+// if(cl<10){
+//   cl='0'+cl
+// }
+
+//  document.getElementById('hour').innerHTML=h
+//  document.getElementById('min').innerHTML=m
+//  document.getElementById('sec').innerHTML=s
+// }
+// setInterval(startTime, 100);
+// console.log("hello")
+let day = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+// var p = date.getHours();
+// var r=date.getMinutes()
+// var s=date.getSeconds()
+// console.log(date.getDate());
+
+// function startTime() {
+//   cl++;
+//   //  console.log( cl%60)
+//   watch3.innerHTML = "Date" + date.getDate() + "-" + p + ":";
+// }
+// setInterval(startTime, 300);
+
+const SEC = 1;
+var date = new Date();
+let cl = SEC*(date.getHours()*60+date.getMinutes())*60+date.getSeconds()
+function time() {
+  cl++
+watch2.innerHTML = Math.floor(cl/3600)%24+":"+ Math.floor(cl/60)%60 +":" +cl%60;
+console.log(cl)
+}
+setInterval(time, 1000 * SEC);
