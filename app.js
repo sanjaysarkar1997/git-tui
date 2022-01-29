@@ -221,9 +221,9 @@ function time() {
 
   console.log(s, m, h);
 
-  secondHand.style.transform = `rotate(${s * 6}deg)`;
-  minuteHand.style.transform = `rotate(${m * 6 -90}deg)`;
-  hourHand.style.transform = `rotate(${h * 20}deg)`;
+  secondHand.style.transform = `rotate(${s * 6-90}deg)`;
+  minuteHand.style.transform = `rotate(${m * 6-90 }deg)`;
+  hourHand.style.transform = `rotate(${h *20}deg)`;
 
   // watch2.innerHTML =
   //   (Math.floor(cl / 3600) % 24) +
