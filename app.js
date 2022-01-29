@@ -205,17 +205,32 @@ let cl =
   SEC * (date.getHours() * 60 + date.getMinutes()) * 60 + date.getSeconds();
 
 let secondHand = document.querySelector("#second-hand");
+let minuteHand = document.querySelector("#minute-hand");
+let hourHand = document.querySelector("#hour-hand");
+
 function time() {
   cl++;
 
-  secondHand.style.transform = `rotate(${cl * 6}deg)`;
+  let s = cl % 60;
+  let m = (cl / 60) % 60;
+  let h = (cl / 3600) % 12;
 
-  watch2.innerHTML =
-    (Math.floor(cl / 3600) % 24) +
-    ":" +
-    (Math.floor(cl / 60) % 60) +
-    ":" +
-    (cl % 60);
-  console.log(cl);
+  s = Math.floor(s);
+  m = Math.floor(m);
+  h = Math.floor(h);
+
+  console.log(s, m, h);
+
+  secondHand.style.transform = `rotate(${s * 6}deg)`;
+  minuteHand.style.transform = `rotate(${m * 6 -90}deg)`;
+  hourHand.style.transform = `rotate(${h * 20}deg)`;
+
+  // watch2.innerHTML =
+  //   (Math.floor(cl / 3600) % 24) +
+  //   ":" +
+  //   (Math.floor(cl / 60) % 60) +
+  //   ":" +
+  //   (cl % 60);
 }
+// time()
 setInterval(time, 1000 * SEC);

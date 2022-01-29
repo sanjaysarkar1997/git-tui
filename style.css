@@ -10,10 +10,30 @@ table {
 
 .second-hand{
     position: absolute;
+    border: 1px solid red;
+    width: 130px;
+    left: 50%;
+    transform: rotate(20deg);
+    top: 152px;
+    transform-origin: 0px 10%;
+}
+
+.minute-hand{
+    position: absolute;
     border: 1px solid black;
     width: 130px;
     left: 50%;
     transform: rotate(20deg);
+    top: 152px;
+    transform-origin: 0px 10%;
+}
+
+.hour-hand{
+    position: absolute;
+    border: 1px solid black;
+    width: 100px;
+    left: 50%;
+    transform: rotate(25deg);
     top: 152px;
     transform-origin: 0px 10%;
 }
