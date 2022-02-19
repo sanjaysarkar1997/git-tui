@@ -210,7 +210,7 @@ let hourHand = document.querySelector("#hour-hand");
 
 function time() {
   cl++;
-
+console.log(cl)
   let s = cl % 60;
   let m = (cl / 60) % 60;
   let h = (cl / 3600) % 12;

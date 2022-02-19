@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style2.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div class="img-wrap">
+        <img style="object-fit:contain; height:400px;
+      width: 100%;" src="https://tagmango.com/staticassets/1645166409133.jpg">
+      </div>
+    </div>
+    <!-- <p class="para-content">a fortnightly newsletter</p> -->
+    <div class="form-wrapper"><iframe class="form-wrap" id="f-wrap"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScOAed4OD9qiqTCV07W0LdA4X4zznaA2lH8-SZqd1XrxrjKKw/viewform?embedded=true"
+        width="530" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+    <div class="para-wrap">
+      <p class="para1-content">
+        Hello,</p>
+
+      <p class="para2-content">Small Scenes is a fortnightly newsletter of essays + occasional recommendations and
+        conversations + chances to
+        share your own writing with fellow subscribers. It's running for six months only, from Feb 14 to Aug 15.
+      </p>
+      <p class="para3-content">Once you've subscribed—for a one-time payment of ₹750 / $10—you'll be able to access all
+        small scenes notes and
+        essays sent out this season, and will start receiving new ones in your email inbox every other Monday.</p>
+
+      <p class="para4-content">If you can't afford it, just write to me at regajha@gmail.com — we'll figure it out. And
+        if you can pay and you
+        choose to: thank you, thank you.</p>
+
+      <p class="para5-content">I can't wait to write to you.</p>
+      <p class="para6-content">
+        <span> ♡</span>
+        Rega
+      </p>
+    </div>
+  </div>
+  <footer class="footer">
+    Copyright © 2020 TagMango, Inc. All rights reserved.
+  </footer>
+</body>
+<script>
+  console.log(window.outerWidth)
+  function frameRezier() {
+var k= document.getElementById("f-wrap")
+console.log(k)
+if(window.outerWidth<600){
+  k.setAttribute("width",window.outerWidth)
+}
+  }
+  frameRezier();
+ 
+</script>
+</div>
+
+</html>

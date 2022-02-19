@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clock{
+   
+    height: 100vh;
+    width: 100%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock1{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 310px;
+    height: 310px; 
+     display: flex;
+    justify-content: center;
+    align-items: center;   box-shadow: 10px 10px 40px 8px rgb(0, 17, 255);
+   
+   
+}
+
+.clock2{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    width: 300px;
+    height: 300px; 
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  
+}
+
+.clock1::before , .clock1::after{
+    content: '';
+background: linear-gradient(45deg, #e6e6e6,#ff0fff,#e6fb04,#6e0dd0);
+animation: border 20% linear infinite;
+width: calc(100%+20px);
+height: calc(100%+10px);
+z-index: -1;
+}
+
+.clock3{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 100;
+}
+.number{
+ /* border: 2px solid green; */
+ text-align: center;
+ --rotation:0;
+ transform: rotate(var(--rotation));
+position: absolute;
+height: 100%;
+width: 100%;
+font-size: 30px;
+animation: glow 1s ease-in-out infinite alternate;
+color: rgb(241, 237, 237);
+ 
+}
+.number1{
+    --rotation:30deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color:  rgb(241, 237, 237);;
+}.number2{
+    --rotation:60deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number3{
+    --rotation:90deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number4{
+    --rotation:120deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number5{
+    --rotation:150deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number6{
+    --rotation:180deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number7{
+    --rotation:210deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number8{
+    --rotation:240deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number9{
+    --rotation:270deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number10{
+    --rotation:300deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.number11{
+    --rotation:330deg;
+    font-size: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+  color: rgb(241, 237, 237);
+}
+.hhand{
+    width: 60px;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;
+    top:150px;
+    transform: rotate(90deg);
+    transform-origin: 0px 10%;
+    /* box-shadow: 10px 10px 40px 20px #0ff; */
+}
+.mhand{
+    width: 80px;
+    border: 1px solid white;
+    position: absolute;
+    left: 50%;
+    top:150px;
+    transform: rotate(50deg);
+    transform-origin: 0px 10%;
+    
+}
+.shand{
+    width: 100px;
+    border: 1px solid red;
+    position: absolute;
+    left: 50%;
+    top:150px;
+    transform: rotate(20deg);
+    transform-origin: 0px 10%;
+    box-shadow: 10px 10px 40px 8px rgb(255, 17, 0);
+    
+
+}
+/* .shand::before,
+.shand ::after{
+    background: linear-gradient(235deg,#36e600,#ff4da6);
+} */
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #36e600, 0 0 40px #36e600, 0 0 50px #36e600, 0 0 60px #36e600, 0 0 70px #36e600;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
